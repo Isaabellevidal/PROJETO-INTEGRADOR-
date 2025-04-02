@@ -1,0 +1,164 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8ecd1;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f8ecd1;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    width: 190px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #8e5f54;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #f8ecd1;
+    transform: scale(1.1);
+}
+
+/* Imagem Principal Grande */
+.main-image {
+    width: 100vw;
+    margin: 0;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.main-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Container para os cards */
+.generations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.card-wrapper {
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-wrapper img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #8e5f54;
+    font-weight: bold;
+}
+
+.card-wrapper:hover .card {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Nova seção com fundo marrom e imagem ajustada */
+.new-section {
+    background-color: #8e5f54;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem; /* Reduzi a altura do padding */
+    margin-bottom: 2rem;
+    position: relative;
+    max-height: 250px; /* Reduzi a altura da seção */
+}
+
+.new-section .text-content {
+    max-width: 60%;
+    margin-right: 2rem;
+}
+
+.new-section .image-content {
+    max-width: 40%;
+    height: auto;
+}
+
+.new-section .image-content img {
+    width: 40%;  /* Ajusta a imagem para caber na seção */
+    height: auto;
+    object-fit: contain;  /* Garante que a imagem se ajuste sem distorção */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #8e5f54;
+    color: #f8ecd1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .new-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .new-section .text-content {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .new-section .image-content img {
+        width: 80%;  /* Ajusta para telas menores */
+    }
+}
