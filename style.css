@@ -162,3 +162,33 @@ footer {
         width: 80%;  /* Ajusta para telas menores */
     }
 }
+
+.generation-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8B5E3C; /* Cor marrom do fundo */
+    padding: 50px 10%;
+    color: #fff;
+}
+
+.text-box {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 50%;
+}
+
