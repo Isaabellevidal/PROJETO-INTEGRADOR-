@@ -12,43 +12,90 @@ body {
     overflow-x: hidden;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #f8ecd1;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Cabeçalho */header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  font-family: 'Libre Baskerville', serif;
+ 
 }
 
-header img {
-    width: 190px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-header img:hover {
-    transform: scale(1.05);
+.logo-container img {
+  max-width: 190px;
+  height: auto;
 }
 
 nav {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 2rem;
 }
 
 nav a {
-    text-decoration: none;
-    color: #8e5f54;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #f8ecd1;
-    transform: scale(1.1);
+  color: #4f46e5;
 }
 
+/* Menu hambúrguer para dispositivos móveis */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  background-color: #333;
+  height: 4px;
+  width: 100%;
+}
+
+#nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Responsividade - menu se transforma em hambúrguer */
+@media (max-width: 768px) {
+  .logo-container {
+    flex: 1;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 100;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+}
 /* Imagem Principal Grande */
 .main-image {
     width: 100vw;
@@ -75,10 +122,24 @@ nav a:hover {
 }
 
 .card-wrapper {
-    width: 280px;
+    width: 370px;
     text-align: center;
     transition: transform 0.3s ease;
 }
+
+.card-wrappera {
+    width: 590px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.card-wrappera img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
 
 .card-wrapper img {
     width: 100%;
@@ -116,10 +177,10 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem; /* Reduzi a altura do padding */
+    padding: 1.5rem;
     margin-bottom: 2rem;
     position: relative;
-    max-height: 250px; /* Reduzi a altura da seção */
+    max-height: 250px;
 }
 
 .new-section .text-content {
@@ -133,9 +194,9 @@ nav a:hover {
 }
 
 .new-section .image-content img {
-    width: 40%;  /* Ajusta a imagem para caber na seção */
+    width: 40%;
     height: auto;
-    object-fit: contain;  /* Garante que a imagem se ajuste sem distorção */
+    object-fit: contain;
 }
 
 /* Rodapé */
@@ -159,36 +220,130 @@ footer {
     }
 
     .new-section .image-content img {
-        width: 80%;  /* Ajusta para telas menores */
+        width: 80%;
     }
 }
 
-.generation-message {
+/* ----------- HISTÓRIAS & EXPERIÊNCIAS ----------- */
+
+.hist-header {
+    background-color: #f9f1e7;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hist-header .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #8B5E3C; /* Cor marrom do fundo */
-    padding: 50px 10%;
-    color: #fff;
 }
 
-.text-box {
-    flex: 1;
-    text-align: center;
+.hist-header .logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.hist-header .logo span {
     font-size: 1.5rem;
-    max-width: 600px;
-    line-height: 1.5;
+    font-weight: bold;
 }
 
-.image-box {
-    flex: 1;
+.hist-header nav a {
+    margin-left: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #8e5f54;
+    transition: color 0.3s ease;
+}
+
+.hist-header nav a:hover,
+.hist-header nav a.active {
+    color: #a67c52;
+}
+
+/* Imagem de fundo com título centralizado */
+.main-image-historias {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.main-image-historias img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-title-historias {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Título acima dos cards */
+.titulo-integrantes {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #8e5f54;
+    margin: 3rem auto 2rem;
+    display: block;
+    width: 100%;
+}
+
+/* Grid dos cards */
+.generations {
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
+    padding: 0 2rem;
 }
 
-.image-box img {
-    width: 80%;
-    max-width: 400px;
-    border-radius: 50%;
+/* Estilo dos cards individuais */
+.card-wrapperb {
+    width: 22%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f8ecd1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-wrapperb:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .card-wrapperb {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-wrapperb {
+        width: 90%;
+    }
+
+    .titulo-integrantes {
+        font-size: 1.6rem;
+    }
 }
 
