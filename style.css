@@ -1,154 +1,169 @@
-/* Reset e estilos globais */
+/* =====================
+   RESET E ESTILOS GLOBAIS
+====================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Arial', sans-serif;
     background-color: #f8ecd1;
     color: #333;
     overflow-x: hidden;
-}
-
-/* Cabeçalho */header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 50px;
-  font-family: 'Libre Baskerville', serif;
- 
-}
-
-.logo-container img {
-  max-width: 190px;
-  height: auto;
-}
-
-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #4f46e5;
-}
-
-/* Menu hambúrguer para dispositivos móveis */
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-}
-
-.menu-icon span {
-  background-color: #333;
-  height: 4px;
-  width: 100%;
-}
-
-#nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-/* Responsividade - menu se transforma em hambúrguer */
-@media (max-width: 768px) {
-  .logo-container {
-    flex: 1;
   }
-
+  
+  /* =====================
+     CABEÇALHO
+  ====================== */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    font-family: 'Libre Baskerville';
+  }
+  
+  .logo-container img {
+    max-width: 190px;
+    height: auto;
+  }
+  
   nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #8e5f54;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #3D412F;
+  }
+  
+  /* =====================
+     MENU HAMBÚRGUER (MOBILE)
+  ====================== */
+  .menu-icon {
     display: none;
     flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #fff;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+  }
+  
+  .menu-icon span {
+    background-color: #333;
+    height: 4px;
     width: 100%;
-    z-index: 100;
   }
-
-  nav a {
-    font-size: 1.5rem;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .menu-icon {
+  
+  #nav-links {
     display: flex;
+    gap: 2rem;
   }
-
-  #nav-links.active {
-    display: flex;
+  
+  @media (max-width: 768px) {
+    .logo-container {
+      flex: 1;
+    }
+  
+    nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: #fff;
+      width: 100%;
+      z-index: 100;
+    }
+  
+    nav a {
+      font-size: 1.5rem;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  
+    #nav-links.active {
+      display: flex;
+    }
   }
-}
-/* Imagem Principal Grande */
-.main-image {
+  
+  /* =====================
+     IMAGEM PRINCIPAL
+  ====================== */
+  .main-image {
     width: 100vw;
     margin: 0;
-}
-
-.main-image img {
+  }
+  
+  .main-image img {
     width: 100%;
     height: auto;
     transition: transform 0.5s ease;
-}
-
-.main-image:hover img {
+  }
+  
+  .main-image:hover img {
     transform: scale(1.05);
-}
-
-/* Container para os cards */
-.generations {
+  }
+  
+  /* =====================
+     TÍTULO DAS GERAÇÕES
+  ====================== */
+  .titulo-geracoes {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 50px 0 30px;
+    color: #333;
+  }
+  
+  /* =====================
+     CARDS DAS GERAÇÕES
+  ====================== */
+  .generations1 {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     margin: 2rem 0;
-}
-
-.card-wrapper {
-    width: 370px;
+  }
+  
+  .card-wrapper1 {
+    width: 200px;
     text-align: center;
     transition: transform 0.3s ease;
-}
-
-.card-wrappera {
-    width: 590px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    margin-bottom: 1rem;
-}
-
-.card-wrappera img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-wrapper1 img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
     transition: transform 0.3s ease;
-}
-
-
-.card-wrapper img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.card {
+  }
+  
+  .card-wrapper1:hover {
+    transform: scale(1.03);
+  }
+  
+  .card {
     background-color: white;
     padding: 1.5rem;
     text-align: center;
@@ -156,22 +171,24 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card h3 {
+  }
+  
+  .card h3 {
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #8e5f54;
     font-weight: bold;
-}
-
-.card-wrapper:hover .card {
+  }
+  
+  .card-wrapper1:hover .card {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Nova seção com fundo marrom e imagem ajustada */
-.new-section {
+  }
+  
+  /* =====================
+     NOVA SEÇÃO (Fundo Marrom)
+  ====================== */
+  .new-section {
     background-color: #8e5f54;
     color: #fff;
     display: flex;
@@ -181,103 +198,107 @@ nav a:hover {
     margin-bottom: 2rem;
     position: relative;
     max-height: 250px;
-}
-
-.new-section .text-content {
+  }
+  
+  .new-section .text-content {
     max-width: 60%;
     margin-right: 2rem;
-}
-
-.new-section .image-content {
+  }
+  
+  .new-section .image-content {
     max-width: 40%;
     height: auto;
-}
-
-.new-section .image-content img {
+  }
+  
+  .new-section .image-content img {
     width: 40%;
     height: auto;
     object-fit: contain;
-}
-
-/* Rodapé */
-footer {
+  }
+  
+  @media (max-width: 768px) {
+    .new-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .new-section .text-content {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    .new-section .image-content img {
+      width: 80%;
+    }
+  }
+  
+  /* =====================
+     RODAPÉ
+  ====================== */
+  footer {
     text-align: center;
     padding: 1rem;
     background: #8e5f54;
     color: #f8ecd1;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .new-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .new-section .text-content {
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .new-section .image-content img {
-        width: 80%;
-    }
-}
-
-/* ----------- HISTÓRIAS & EXPERIÊNCIAS ----------- */
-
-.hist-header {
+  }
+  
+  /* =====================
+     HISTÓRIAS & EXPERIÊNCIAS
+  ====================== */
+  .hist-header {
     background-color: #f9f1e7;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.hist-header .logo {
+  }
+  
+  .hist-header .logo {
     display: flex;
     align-items: center;
-}
-
-.hist-header .logo img {
+  }
+  
+  .hist-header .logo img {
     height: 60px;
     margin-right: 10px;
-}
-
-.hist-header .logo span {
+  }
+  
+  .hist-header .logo span {
     font-size: 1.5rem;
     font-weight: bold;
-}
-
-.hist-header nav a {
+  }
+  
+  .hist-header nav a {
     margin-left: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     color: #8e5f54;
     transition: color 0.3s ease;
-}
-
-.hist-header nav a:hover,
-.hist-header nav a.active {
+  }
+  
+  .hist-header nav a:hover,
+  .hist-header nav a.active {
     color: #a67c52;
-}
-
-/* Imagem de fundo com título centralizado */
-.main-image-historias {
+  }
+  
+  /* =====================
+     IMAGEM DE FUNDO - HISTÓRIAS
+  ====================== */
+  .main-image-historias {
     position: relative;
     width: 100%;
     height: 90vh;
     overflow: hidden;
-}
-
-.main-image-historias img {
+  }
+  
+  .main-image-historias img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.main-title-historias {
+  }
+  
+  .main-title-historias {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -289,10 +310,12 @@ footer {
     padding: 1rem 2rem;
     border-radius: 10px;
     text-align: center;
-}
-
-/* Título acima dos cards */
-.titulo-integrantes {
+  }
+  
+  /* =====================
+     CARDS - HISTÓRIAS
+  ====================== */
+  .titulo-integrantes {
     font-family: 'Libre Baskerville', serif;
     text-align: center;
     font-size: 2rem;
@@ -300,19 +323,54 @@ footer {
     margin: 3rem auto 2rem;
     display: block;
     width: 100%;
-}
-
-/* Grid dos cards */
-.generations {
+  }
+  
+ 
+  .cards-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
-    padding: 0 2rem;
-}
+    gap: 30px;
+    padding: 40px 20px;
+    font-family: 'Libre Baskerville', serif;
+  }
+  
+  .card-wrapper {
+    flex: 1 1 300px;
+    max-width: 350px;
+ 
+    border-radius: 12px;
+    overflow: hidden;
+ 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .card-wrapper img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.3rem;
+    color: #8e5f54;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  
 
-/* Estilo dos cards individuais */
-.card-wrapperb {
+  .card-wrapperb {
     width: 22%;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -321,29 +379,212 @@ footer {
     overflow: hidden;
     background-color: #f8ecd1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-wrapperb:hover {
+  }
+  
+  .card-wrapperb:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-
-/* Responsivo */
-@media (max-width: 1024px) {
+  }
+  
+  @media (max-width: 1024px) {
     .card-wrapperb {
-        width: 45%;
+      width: 45%;
     }
-}
-
-@media (max-width: 600px) {
+  }
+  
+  @media (max-width: 600px) {
     .card-wrapperb {
-        width: 90%;
+      width: 90%;
     }
-
+  
     .titulo-integrantes {
-        font-size: 1.6rem;
+      font-size: 1.6rem;
     }
-}
 
+     /* =====================
+     CARDS - HISTÓRIAS
+  ====================== */
+  }
+  .generations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+  }
+  
+  .card-wrappera {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 600px;
+
+    padding: 20px;
+    border-radius: 12px;
+
+    gap: 20px;
+    flex: 1 1 45%;
+  }
+  
+  .card-wrappera img {
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .card-contente h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.2rem;
+    color: #8e5f54;
+    margin-bottom: 8px;
+  }
+  
+  .card-contente p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .card-wrappera {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .card-wrappera img {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+  
+  /* =====================
+   LINHA DO TEMPO
+====================== */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #fef6e4;
+  }
+  
+
+  
+  .period {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .period-content {
+    max-width: 800px;
+    margin-left: 30px;
+  }
+  
+  .period-content h2 {
+    font-size: 1.8rem;
+    color: #8e5f54;
+  }
+  
+  .period-content p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .period img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* =====================
+   ESTILOS PARA OS PERÍODOS
+====================== */
+.period {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row; /* Padrão: imagem à esquerda, conteúdo à direita */
+    padding: 50px;
+    gap: 30px;
+  }
+  
+  .period:nth-child(even) {
+    flex-direction: row-reverse; /* Para os períodos pares, a ordem da imagem e do conteúdo será invertida */
+  }
+  
+  .period img {
+    width: 300px;  /* Aumentando a largura da imagem */
+    height: auto;  /* Manter a proporção original da imagem */
+    margin-bottom: 0;  /* Remover a margem inferior para que a imagem fique alinhada corretamente */
+    border-radius: 8px;  /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra para destacar a imagem */
+  }
+  
+  .period-content {
+    background-color: white;
+    padding: 30px; /* Aumentei o padding para dar mais espaço ao conteúdo */
+    border-radius: 8px;  /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra para destacar o conteúdo */
+    width: 50%;  /* Para limitar o conteúdo e deixá-lo mais harmonioso */
+  }
+  
+  .period-content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8e5f54;
+    margin-bottom: 10px; /* Aumentar o espaço entre o título e o parágrafo */
+  }
+  
+  .period-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;  /* Melhorar a legibilidade do texto */
+    margin-bottom: 10px; /* Deixar mais espaçado entre os parágrafos */
+  }
+  
+  /* Para responsividade */
+  @media screen and (max-width: 768px) {
+    .period {
+      flex-direction: column;  /* Muda para coluna em telas menores */
+      text-align: center;  /* Alinha o texto no centro */
+    }
+  
+    .period img {
+      width: 80%;  /* Ajusta o tamanho da imagem para se adaptar à tela menor */
+      margin-bottom: 20px;
+    }
+  
+    .period-content {
+      width: 90%; /* Diminui a largura do conteúdo para melhor exibição */
+      padding: 20px;
+    }
+  }
+  
+  /* =====================
+     TÍTULO DA LINHA DO TEMPO
+  ====================== */
+  .titulo-linha {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    font-size: 15px;
+    margin: 20px;
+    color: #3D412F;
+  }
+  
+  @media (max-width: 768px) {
+    .titulo-linha {
+      font-size: 10px;
+    
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .titulo-linha {
+      font-size: 6px;
+    
+    }
+  }
+  
