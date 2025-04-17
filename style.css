@@ -188,33 +188,60 @@
   /* =====================
      NOVA SEÇÃO (Fundo Marrom)
   ====================== */
-  .new-section {
-    background-color: #8e5f54;
-    color: #fff;
+  body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #FFF5DC;
+  }
+  
+  /* Layout da seção principal */
+  .section-geracoes {
+    display: flex;
+    height: 90vh;
+    background-color: #8C5C51;
+  }
+  
+  /* Texto centralizado verticalmente e responsivo */
+  .section-geracoes .texto {
+    flex: 0.8;
+    color: #FFF5DC;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    position: relative;
-    max-height: 250px;
+    padding: 2rem 4rem;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    text-align: center;
   }
   
-  .new-section .text-content {
-    max-width: 60%;
-    margin-right: 2rem;
+  /* Container da imagem com borda arredondada inferior esquerda */
+  .section-geracoes .imagem {
+    flex: 1.2;
+    overflow: hidden;
+    border-bottom-left-radius: 500px;
+    background-color: #8C5C51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  .new-section .image-content {
-    max-width: 40%;
-    height: auto;
+  /* Imagem se adapta */
+  .section-geracoes .imagem img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
   }
   
-  .new-section .image-content img {
-    width: 40%;
-    height: auto;
-    object-fit: contain;
+  /* Título inferior */
+  .titulo-geracoes {
+    background-color: #FFF5DC;
+    color: #2F2F2F;
+    padding: 2rem;
+    font-size: 2.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
   }
+  
   
   @media (max-width: 768px) {
     .new-section {
@@ -587,4 +614,46 @@
     
     }
   }
+
+  .section-introducao {
+    background-color: #FFF5DC;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .imagens-geracoes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .imagens-geracoes img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .texto-circular {
+    background-color: #8C5C51;
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .texto-circular p {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    max-width: 400px;
+  }
+  
   
